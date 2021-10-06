@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react';
 import React, { useState, useRef } from 'react';
 import './App.css';
 import formulario from './formulario.jpeg';
@@ -11,7 +12,11 @@ function App() {
     event.preventDefault();
 
     let emptyVal;
-    let dispArr = document.querySelectorAll(".hinput");
+    let cont= document.getElementById('container');
+
+    if(cont){
+      cont.remove();
+    }
 
     for (let i = 0; i < 16; i++) {
 
@@ -29,28 +34,71 @@ function App() {
 
     } else {
 
-      setStatus('complete');
-
-
-      for (let i = 0; i < 16; i++) {
-        event.target[i].readOnly = true;
-        dispArr[i].value = event.target[i].value;
-        dispArr[i].readOnly = true;
-
+      for(let i=0; i<16; i++){
+        event.target[i].readOnly=true;
       }
 
+      setStatus('complete');
+      
+      render(
+        <div id="container">
+
+          <div id="disInfo" style={{
+            backgroundImage: `url(${formulario})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}>
+
+            <input id="hidden0" className="hinput" type="text" readonly="readonly" defaultValue={event.target[0].value} />
+            <input id="hidden1" className="hinput" type="text" readonly="readonly" defaultValue={event.target[1].value} />
+            <input id="hidden2" className="hinput" type="text" readonly="readonly" defaultValue={event.target[2].value} />
+            <input id="hidden3" className="hinput" type="text" readonly="readonly" defaultValue={event.target[3].value} />
+            <input id="hidden4" className="hinput" type="text" readonly="readonly" defaultValue={event.target[4].value} />
+            <input id="hidden5" className="hinput" type="text" readonly="readonly" defaultValue={event.target[5].value} />
+            <input id="hidden6" className="hinput" type="text" readonly="readonly" defaultValue={event.target[6].value} />
+            <input id="hidden7" className="hinput" type="text" readonly="readonly" defaultValue={event.target[7].value} />
+            <input id="hidden8" className="hinput" type="text" readonly="readonly" defaultValue={event.target[8].value} />
+            <input id="hidden9" className="hinput" type="text" readonly="readonly" defaultValue={event.target[9].value} />
+            <input id="hidden10" className="hinput" type="text" readonly="readonly" defaultValue={event.target[10].value} />
+            <input id="hidden11" className="hinput" type="text" readonly="readonly" defaultValue={event.target[11].value} />
+            <input id="hidden12" className="hinput" type="text" readonly="readonly" defaultValue={event.target[12].value} />
+            <input id="hidden13" className="hinput" type="text" readonly="readonly" defaultValue={event.target[13].value} />
+            <input id="hidden14" className="hinput" type="text" readonly="readonly" defaultValue={event.target[14].value} />
+            <input id="hidden15" className="hinput" type="text" readonly="readonly" defaultValue={event.target[15].value} />
+
+          </div>
+        </div>
+      );
+
+
     }
+
 
   }
 
   function handleClick(event) {
-    setStatus('');
 
-    let writeAgain = document.querySelectorAll(".datos");
-    for (let i = 0; i < 16; i++) {
-      writeAgain[i].readOnly = false;
+    if (status==='complete') {
+
+      setStatus('');
+
+      let writeAgain = document.querySelectorAll(".datos");
+      let cont= document.getElementById('container');
+
+
+      for (let i = 0; i < 16; i++) {
+        writeAgain[i].readOnly = false;
+      }
+
+      cont.remove();
+
+
     }
-
+    else{
+      alert("No hay contenido para resetear");
+    }
+  
   }
 
   return (
@@ -95,12 +143,13 @@ function App() {
           <label htmlFor="unplanned">Unplanned activity: </label>
           <input id="unplanned" className="datos" type="text" />
 
-        </div>
-
-        <div id="thirdrow">
           <label htmlFor="weekday">Day of the week: </label>
           <input id="weekday" className="datos" type="text" />
 
+        </div>
+
+        <div id="thirdrow">
+          
           <label htmlFor="month">Month: </label>
           <input id="month" className="datos" type="text" />
 
@@ -113,12 +162,14 @@ function App() {
           <label htmlFor="time">Start time: </label>
           <input id="time" className="datos" type="text" />
 
+          <label htmlFor="location">Location/ Address: </label>
+          <input id="location" className="datos" type="text" />
+
         </div>
 
         <div id="lastrow">
 
-          <label htmlFor="location">Location/ Address: </label>
-          <input id="location" className="datos" type="text" />
+          
 
           <label htmlFor="addnote">Additional notes: </label>
           <input id="addnote" className="datos" type="text" />
@@ -133,36 +184,6 @@ function App() {
         </div>
 
       </form>
-
-      <div id="container">
-
-      <div id="disInfo" style={{
-        backgroundImage:`url(${formulario})`,
-        backgroundPosition:'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-      }}>
-
-
-        <input id="hidden0" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden1" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden2" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden3" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden4" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden5" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden6" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden7" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden8" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden9" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden10" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden11" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden12" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden13" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden14" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-        <input id="hidden15" className="hinput" type="text" readonly="readonly" defaultValue={status.value} onSubmit={handleSubmit} />
-
-      </div>
-      </div>
 
 
     </div>

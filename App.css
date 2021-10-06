@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:wght@700&family=Kanit:wght@300&display=swap');
+
+html{
+  background-color:#202020;
+}
+
+h2{
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  margin-left: 50px;
+  color: white;
+}
+
 #firstrow{
   display: flex;
   flex-direction: row;
@@ -8,8 +22,12 @@
 
 #firstrow label{
   text-align:center;
-  font-size: 18px;
-  width: 100px;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  margin: 10px;
+  color: white;
+
 }
 
 #secondrow{
@@ -22,8 +40,11 @@
 
 #secondrow label{
   text-align:center;
-  font-size: 18px;
-  width: 100px;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  color: white;
+
   
 }
 
@@ -36,8 +57,11 @@
 
 #thirdrow label{
   text-align:center;
-  font-size: 18px;
-  width: 100px;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  color: white;
+
 }
 
 #lastrow{
@@ -49,28 +73,47 @@
 
 #lastrow label{
   text-align:center;
-  font-size: 18px;
-  width: 100px;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  color: white;
+
+  
 }
 
 #firstrow input {
-  width: 100px;
+  width: 150px;
   height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
 }
 
 #secondrow input {
-  width: 100px;
+  width: 150px;
   height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+
 }
 
 #thirdrow input {
-  width: 100px;
+  width: 150px;
   height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+
 }
 
 #lastrow input {
-  width: 100px;
+  width: 300px;
   height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+
 }
 
 #buttons{
@@ -84,6 +127,12 @@
   width: 100px;
   height: 40px;
   margin: 10px;
+  border-radius: 5px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background-color: #1269ff;
+  color: white;
+  border-width: 0px;
 }
 
 #container{
@@ -100,76 +149,143 @@
 
 #hidden0{
   position: absolute;
-  margin-top: 170px;
+  margin-top: 175px;
   margin-left: 140px;
   width:200px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden1{
   position: absolute;
-  margin-top: 170px;
+  margin-top: 175px;
   margin-left: 470px;
   width:190px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 
 }
 
 #hidden2{
   position: absolute;
-  margin-top: 240px;
+  margin-top: 245px;
   margin-left: 140px;
   width:130px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden3{
   position: absolute;
-  margin-top: 285px;
+  margin-top: 290px;
   margin-left: 70px;
   width: 390px;
+  height: 16px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden4{
   position: absolute;
-  margin-top: 327px;
+  margin-top: 330px;
   margin-left: 130px;
   width:270px;
+  height: 16px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden5{
   position: absolute;
-  margin-top: 370px;
+  margin-top: 375px;
   margin-left: 110px;
   width:180px;
+  height: 16px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden6{
   position: absolute;
-  margin-top: 410px;
-  margin-left: 430px;
+  margin-top: 415px;
+  margin-left: 380px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden7{
   position: absolute;
   margin-top: 455px;
-  margin-left: 270px;
+  margin-left: 230px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden8{
   position: absolute;
-  margin-top: 495px;
-  margin-left: 450px;
+  margin-top: 500px;
+  margin-left: 380px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden9{
   position: absolute;
   margin-top: 660px;
-  margin-left: 70px;
+  margin-left: 80px;
+  width: 130px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden10{
   position: absolute;
   margin-top: 660px;
-  margin-left: 270px;
+  margin-left: 260px;
   width: 60px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden11{
@@ -177,27 +293,51 @@
   margin-top: 660px;
   margin-left: 355px;
   width: 40px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden12{
   position: absolute;
   margin-top: 660px;
   margin-left: 420px;
-  width: 40px;
+  width: 50px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden13{
   position: absolute;
   margin-top: 660px;
-  margin-left: 570px;
+  margin-left: 560px;
   width: 70px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden14{
   position: absolute;
-  margin-top: 710px;
+  margin-top: 715px;
   margin-left: 120px;
   width: 500px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
 #hidden15{
@@ -205,5 +345,11 @@
   margin-top: 760px;
   margin-left: 120px;
   width: 500px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
