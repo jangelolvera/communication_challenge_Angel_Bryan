@@ -1,1 +1,1 @@
-En esta versión se puede verificar que todos los campos estén llenos
+Versión funcional, solo falta corregir el OnClick del reset
