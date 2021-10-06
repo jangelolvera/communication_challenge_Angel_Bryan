@@ -1,0 +1,209 @@
+#firstrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+#firstrow label{
+  text-align:center;
+  font-size: 18px;
+  width: 100px;
+}
+
+#secondrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#secondrow label{
+  text-align:center;
+  font-size: 18px;
+  width: 100px;
+  
+}
+
+#thirdrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#thirdrow label{
+  text-align:center;
+  font-size: 18px;
+  width: 100px;
+}
+
+#lastrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#lastrow label{
+  text-align:center;
+  font-size: 18px;
+  width: 100px;
+}
+
+#firstrow input {
+  width: 100px;
+  height: 30px;
+}
+
+#secondrow input {
+  width: 100px;
+  height: 30px;
+}
+
+#thirdrow input {
+  width: 100px;
+  height: 30px;
+}
+
+#lastrow input {
+  width: 100px;
+  height: 30px;
+}
+
+#buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons button{
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#disInfo{
+  width: 700px;
+  height: 800px;
+}
+
+#hidden0{
+  position: absolute;
+  margin-top: 170px;
+  margin-left: 140px;
+  width:200px;
+}
+
+#hidden1{
+  position: absolute;
+  margin-top: 170px;
+  margin-left: 470px;
+  width:190px;
+
+}
+
+#hidden2{
+  position: absolute;
+  margin-top: 240px;
+  margin-left: 140px;
+  width:130px;
+}
+
+#hidden3{
+  position: absolute;
+  margin-top: 285px;
+  margin-left: 70px;
+  width: 390px;
+}
+
+#hidden4{
+  position: absolute;
+  margin-top: 327px;
+  margin-left: 130px;
+  width:270px;
+}
+
+#hidden5{
+  position: absolute;
+  margin-top: 370px;
+  margin-left: 110px;
+  width:180px;
+}
+
+#hidden6{
+  position: absolute;
+  margin-top: 410px;
+  margin-left: 430px;
+}
+
+#hidden7{
+  position: absolute;
+  margin-top: 455px;
+  margin-left: 270px;
+}
+
+#hidden8{
+  position: absolute;
+  margin-top: 495px;
+  margin-left: 450px;
+}
+
+#hidden9{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 70px;
+}
+
+#hidden10{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 270px;
+  width: 60px;
+}
+
+#hidden11{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 355px;
+  width: 40px;
+}
+
+#hidden12{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 420px;
+  width: 40px;
+}
+
+#hidden13{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 570px;
+  width: 70px;
+}
+
+#hidden14{
+  position: absolute;
+  margin-top: 710px;
+  margin-left: 120px;
+  width: 500px;
+}
+
+#hidden15{
+  position: absolute;
+  margin-top: 760px;
+  margin-left: 120px;
+  width: 500px;
+}
+
