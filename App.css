@@ -10,6 +10,13 @@ h2{
   font-size: 40px;
   margin-left: 50px;
   color: white;
+  
+}
+
+.header{
+  border:0px;
+  border-bottom: 5px groove white;
+
 }
 
 #firstrow{
@@ -18,6 +25,10 @@ h2{
   justify-content: space-between;
   align-items: center;
   
+}
+
+input::placeholder{
+  font-size: 15px;
 }
 
 #firstrow label{
@@ -124,7 +135,7 @@ h2{
 }
 
 #buttons button{
-  width: 100px;
+  width: 110px;
   height: 40px;
   margin: 10px;
   border-radius: 5px;
@@ -133,6 +144,10 @@ h2{
   background-color: #1269ff;
   color: white;
   border-width: 0px;
+}
+
+#buttons #resbtn{
+  background-color: #ff1846;
 }
 
 #container{
