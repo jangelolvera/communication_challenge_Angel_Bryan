@@ -1,1 +1,2 @@
-Terminado, falta mejorar el css
+Terminado, falta tomar screen shot
+
