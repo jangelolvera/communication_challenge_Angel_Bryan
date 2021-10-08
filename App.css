@@ -31,13 +31,15 @@ input::placeholder{
   font-size: 15px;
 }
 
+
 #firstrow label{
   text-align:center;
   font-size: 22px;
   font-family: 'Crimson Text', serif;
-  width: 180px;
-  margin: 10px;
+  width: 100px;
   color: white;
+  line-height: 25px;
+  margin-right: 0px;
 
 }
 
@@ -55,6 +57,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   width: 180px;
   color: white;
+  line-height: 25px;
+  margin-right: 0px;
 
   
 }
@@ -72,6 +76,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   width: 180px;
   color: white;
+  line-height: 25px;
+  margin-right: 0px;
 
 }
 
@@ -88,6 +94,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   width: 180px;
   color: white;
+  line-height: 25px;
+  margin-right: 0px;
 
   
 }
@@ -98,6 +106,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   font-size: 20px;
   border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
 }
 
 #secondrow input {
@@ -106,6 +116,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   font-size: 20px;
   border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
 
 }
 
@@ -115,6 +127,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   font-size: 20px;
   border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
 
 }
 
@@ -124,6 +138,8 @@ input::placeholder{
   font-family: 'Crimson Text', serif;
   font-size: 20px;
   border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
 
 }
 
@@ -144,10 +160,16 @@ input::placeholder{
   background-color: #1269ff;
   color: white;
   border-width: 0px;
+  cursor:pointer;
 }
+
 
 #buttons #resbtn{
   background-color: #ff1846;
+}
+
+#buttons #printbtn{
+  background-color: #2ec545;
 }
 
 #container{

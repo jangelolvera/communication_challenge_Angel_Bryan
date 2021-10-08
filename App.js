@@ -2,10 +2,14 @@ import { render } from '@testing-library/react';
 import React, { useState, useRef } from 'react';
 import './App.css';
 import formulario from './formulario.jpeg';
+import html2canvas from 'html2canvas';
 
 function App() {
 
   const [status, setStatus] = useState('');
+
+  const form = useRef();
+  const preview = useRef();
 
   function handleSubmit(event) {
 
@@ -30,7 +34,7 @@ function App() {
 
     if (emptyVal === true) {
 
-      alert("ingresa todos los campos!!");
+      alert("Please, fill all the fields");
 
     } else {
 
@@ -43,11 +47,12 @@ function App() {
       render(
         <div id="container">
 
-          <div id="disInfo" style={{
+          <div id="disInfo" ref={form} style={{
             backgroundImage: `url(${formulario})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
+
           }}>
 
             <input id="hidden0" className="hinput" type="text" readOnly="readonly" defaultValue={event.target[0].value} />
@@ -84,17 +89,15 @@ function App() {
       let writeAgain = document.querySelectorAll(".datos");
       let cont = document.getElementById('container');
 
-
       for (let i = 0; i < 16; i++) {
         writeAgain[i].readOnly = false;
       }
 
       cont.remove();
 
-
     }
     else {
-      alert("No hay contenido para resetear");
+      alert("There is no content to reset");
     }
 
   }
@@ -147,7 +150,7 @@ function App() {
 
       <div id="container">
 
-        <div id="disInfo" style={{
+        <div id="disInfo" ref={form} style={{
           backgroundImage: `url(${formulario})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -177,6 +180,25 @@ function App() {
 
   }
 
+  function getPreview() {
+    if (status==='complete') {
+      window.scrollTo(0, 0); // <-- this fixes the issue
+      html2canvas(form.current).then(canvas => {
+        //preview.current.innerHTML = ' ';
+        //preview.current.appendChild(canvas);
+        //preview.current.children[0].classList.add('canvas')
+        //setPrinting(false);
+        preview.current.setAttribute('href', canvas.toDataURL());
+        preview.current.setAttribute('download', Date.now().toString()); //nombbre del descargable
+        //preview.current.removeAttribute('disabled');
+        preview.current.click();
+      });
+    }else{
+      alert("Yo haven't generated an invitation!");
+    }
+
+  }
+
   return (
     <div className="App">
       <div class="header">
@@ -191,64 +213,64 @@ function App() {
         <div id="firstrow">
 
           <label htmlFor="recipient">Name of recipient: </label>
-          <input id="recipient" className="datos" type="text" placeholder="Who are you inviting?"/>
+          <input id="recipient" className="datos" type="text" placeholder="Who are you inviting?" />
 
           <label htmlFor="sender">Name of sender: </label>
-          <input id="sender" className="datos" type="text" placeholder="Who's writting"/>
+          <input id="sender" className="datos" type="text" placeholder="Who's writting" />
 
-          <label htmlFor="relationship">Relationship: </label>
-          <input id="relationship" className="datos" type="text" placeholder="(eg. Friend, Dad, colleague...)"/>
+          <label htmlFor="relationship">Relation: </label>
+          <input id="relationship" className="datos" type="text" placeholder="(eg. Friend, Dad, colleague...)" />
 
-          <label htmlFor="yourevent">Event: </label>
-          <input id="yourevent" className="datos" type="text" placeholder="Name of the event"/>
+          <label htmlFor="yourevent">Event name: </label>
+          <input id="yourevent" className="datos" type="text" placeholder="Name of the event" />
 
-          <label htmlFor="modifier">Modifier: </label>
-          <input id="modifier" className="datos" type="text" placeholder="(eg. Academic, social...)"/>
+          <label htmlFor="modifier">Event type: </label>
+          <input id="modifier" className="datos" type="text" placeholder="(eg. Academic, social...)" />
 
         </div>
 
         <div id="secondrow">
 
           <label htmlFor="emotion">Emotion: </label>
-          <input id="emotion" className="datos" type="text" placeholder="(eg. happy, grateful...)"/>
+          <input id="emotion" className="datos" type="text" placeholder="(eg. happy, grateful...)" />
 
           <label htmlFor="activity">Activity: </label>
-          <input id="activity" className="datos" type="text" placeholder="(eg. study, eat...)"/>
+          <input id="activity" className="datos" type="text" placeholder="(eg. study, eat...)" />
 
           <label htmlFor="secondact">Second activity: </label>
-          <input id="secondact" className="datos" type="text" placeholder="(eg. study, eat...)"/>
+          <input id="secondact" className="datos" type="text" placeholder="(eg. study, eat...)" />
 
           <label htmlFor="unplanned">Unplanned activity: </label>
-          <input id="unplanned" className="datos" type="text" placeholder="(eg. study, eat...)"/>
+          <input id="unplanned" className="datos" type="text" placeholder="(eg. study, eat...)" />
 
           <label htmlFor="weekday">Day of the week: </label>
-          <input id="weekday" className="datos" type="text" placeholder="(eg. friday, monday...)"/>
+          <input id="weekday" className="datos" type="text" placeholder="(eg. friday, monday...)" />
 
         </div>
 
         <div id="thirdrow">
 
           <label htmlFor="month">Month: </label>
-          <input id="month" className="datos" type="text" placeholder="(eg. Jan, Feb, Mar...)"/>
+          <input id="month" className="datos" type="text" placeholder="(eg. Jan, Feb, Mar...)" />
 
           <label htmlFor="day">Day: </label>
-          <input id="day" className="datos" type="text" placeholder="(eg. 01, 02, 10...)"/>
+          <input id="day" className="datos" type="text" placeholder="(eg. 01, 02, 10...)" />
 
           <label htmlFor="year">Year: </label>
-          <input id="year" className="datos" type="text" placeholder="(eg. 2021, 2022...)"/>
+          <input id="year" className="datos" type="text" placeholder="(eg. 2021, 2022...)" />
 
           <label htmlFor="time">Start time: </label>
-          <input id="time" className="datos" type="text" placeholder="(eg. 12:00, 06:00...)"/>
+          <input id="time" className="datos" type="text" placeholder="(eg. 12:00, 06:00...)" />
 
           <label htmlFor="location">Location/ Address: </label>
-          <input id="location" className="datos" type="text" placeholder="(eg. My house, school....)"/>
+          <input id="location" className="datos" type="text" placeholder="(eg. My house, school....)" />
 
         </div>
 
         <div id="lastrow">
 
           <label htmlFor="addnote">Additional notes: </label>
-          <input id="addnote" className="datos" type="text" placeholder="Additional advice"/>
+          <input id="addnote" className="datos" type="text" placeholder="Additional advice" />
 
         </div>
 
@@ -257,10 +279,14 @@ function App() {
           <button type="reset" id="resbtn" onClick={handleClick}>Reset</button>
           <button type="submit" id="genbtn">Generate</button>
           <button type="button" id="random" onClick={genRandom}>Randomize</button>
+          <button type="button" id="printbtn" onClick={getPreview}>Print</button>
 
         </div>
 
+
       </form>
+
+      <a id="preview" ref={preview} href="www.google.com" disable />
 
     </div>
   );
