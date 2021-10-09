@@ -1,38 +1,392 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:wght@700&family=Kanit:wght@300&display=swap');
+
+html{
+  background-color:#202020;
+}
+
+h2{
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  margin-left: 50px;
+  color: white;
+  
+}
+
+.header{
+  border:0px;
+  border-bottom: 5px groove white;
+
+}
+
+#firstrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+input::placeholder{
+  font-size: 15px;
+}
+
+
+#firstrow label{
+  text-align:center;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 100px;
+  color: white;
+  line-height: 25px;
+  margin-right: 0px;
+
+}
+
+#secondrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#secondrow label{
+  text-align:center;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  color: white;
+  line-height: 25px;
+  margin-right: 0px;
+
+  
+}
+
+#thirdrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#thirdrow label{
+  text-align:center;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  color: white;
+  line-height: 25px;
+  margin-right: 0px;
+
+}
+
+#lastrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#lastrow label{
+  text-align:center;
+  font-size: 22px;
+  font-family: 'Crimson Text', serif;
+  width: 180px;
+  color: white;
+  line-height: 25px;
+  margin-right: 0px;
+
+  
+}
+
+#firstrow input {
+  width: 150px;
+  height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+#secondrow input {
+  width: 150px;
+  height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
+
+}
+
+#thirdrow input {
+  width: 150px;
+  height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
+
+}
+
+#lastrow input {
+  width: 300px;
+  height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
+
+}
+
+#buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons button{
+  width: 110px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 5px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background-color: #1269ff;
+  color: white;
+  border-width: 0px;
+  cursor:pointer;
+}
+
+
+#buttons #resbtn{
+  background-color: #ff1846;
+}
+
+#buttons #printbtn{
+  background-color: #2ec545;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#disInfo{
+  width: 700px;
+  height: 800px;
+}
+
+#hidden0{
+  position: absolute;
+  margin-top: 175px;
+  margin-left: 140px;
+  width:200px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#hidden1{
+  position: absolute;
+  margin-top: 175px;
+  margin-left: 470px;
+  width:190px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hidden2{
+  position: absolute;
+  margin-top: 245px;
+  margin-left: 140px;
+  width:130px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#hidden3{
+  position: absolute;
+  margin-top: 290px;
+  margin-left: 70px;
+  width: 390px;
+  height: 16px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+#hidden4{
+  position: absolute;
+  margin-top: 330px;
+  margin-left: 130px;
+  width:270px;
+  height: 16px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#hidden5{
+  position: absolute;
+  margin-top: 375px;
+  margin-left: 110px;
+  width:180px;
+  height: 16px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
 }
+
+#hidden6{
+  position: absolute;
+  margin-top: 415px;
+  margin-left: 380px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden7{
+  position: absolute;
+  margin-top: 455px;
+  margin-left: 230px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden8{
+  position: absolute;
+  margin-top: 500px;
+  margin-left: 380px;
+  height: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden9{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 80px;
+  width: 130px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden10{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 260px;
+  width: 60px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden11{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 355px;
+  width: 40px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden12{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 420px;
+  width: 50px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden13{
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 560px;
+  width: 70px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden14{
+  position: absolute;
+  margin-top: 715px;
+  margin-left: 120px;
+  width: 500px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
+#hidden15{
+  position: absolute;
+  margin-top: 760px;
+  margin-left: 120px;
+  width: 500px;
+  height: 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  background: transparent;
+  border:0px;
+  text-align: center;
+}
+
